@@ -1,0 +1,7 @@
+package.json
+*.js
+*.html
+*.wasm
+*.md
+*.json
+app/core/*

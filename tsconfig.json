@@ -1,0 +1,34 @@
+{
+  "compilerOptions": {
+    "baseUrl": "./scripts",
+    "target": "es2020",
+    "module": "commonjs",
+    "moduleResolution": "node",
+    "noEmit": true,
+    "lib": ["es2019", "DOM"],
+    "typeRoots": [
+      "./node_modules/@types",
+      "./scripts/@types"
+    ],
+    "strict": true,
+    "noImplicitAny": true,
+    "strictNullChecks": true,
+    "strictFunctionTypes": true,
+    "noImplicitThis": true,
+    "alwaysStrict": true,
+    "declaration": true,
+    "noImplicitReturns": true,
+    "noFallthroughCasesInSwitch": true,
+    "noUnusedLocals": true,
+    "skipLibCheck": true,
+    "esModuleInterop": true,
+    "resolveJsonModule": true,
+    "outDir": "dist",
+    "sourceMap": true,
+    "allowSyntheticDefaultImports": true,
+    "types": ["node"]
+  },
+  "include": ["./test", "./src", "./scripts"],//only the "scripts" part.
+  "files": ["./hardhat.config.ts"],
+  "exclude": ["node_modules/**", "dist/**"]
+}

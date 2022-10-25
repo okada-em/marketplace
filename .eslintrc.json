@@ -1,0 +1,80 @@
+{
+  "env": {
+    "browser": true,
+    "es2021": true,
+    "jest": true
+  },
+  "extends": [
+    "eslint:recommended",
+    "google"
+  ],
+  "plugins": [
+    "@typescript-eslint",
+    "import"
+  ],
+  "parser": "@typescript-eslint/parser",
+  "parserOptions": {
+    "ecmaVersion": "latest",
+    "sourceType": "module"
+  },
+  "settings": {
+    "import/resolver": {
+      "typescript": {
+        "project": "./"
+      }
+    }
+  },
+  "rules": {
+    "import/prefer-default-export": "off",
+    "import/extensions": "off",
+    "max-len": "off",
+    "no-multi-spaces": "error",
+    "no-console": "warn", // consoleでたら警告
+    "require-jsdoc": 0, // jsdocは省略
+    "valid-jsdoc": 0, // sdocの書式誤りは警告
+    "dot-notation": 0, // これはOK
+    "@typescript-eslint/no-explicit-any": "error", // 明示的なanyの使用を警告
+    // `_var` という以外の命名での、未使用な変数を警告
+    "@typescript-eslint/no-unused-vars": [
+      "warn",
+      {
+        "argsIgnorePattern": "^_",
+        "varsIgnorePattern": "^_"
+      }
+    ],
+    "no-unused-vars": [
+      "warn",
+      {
+        "argsIgnorePattern": "^_",
+        "varsIgnorePattern": "^_"
+      }
+    ],
+    "semi": "off",
+    "no-extra-semi": "error",
+    "no-shadow": "error",
+    "eqeqeq": "error",
+    "func-style": "error",
+    "comma-dangle": "off",
+    "object-curly-spacing": "off",
+    "indent": "off",
+    "import/order": [
+      "error",
+      {
+        "groups": ["builtin", "external", "parent", "sibling", "index", "object", "type"],
+        "pathGroups": [
+          {
+            "pattern": "app/**",
+            "group": "parent",
+            "position": "before"
+          }
+        ],
+        "pathGroupsExcludedImportTypes": ["builtin"],
+        "alphabetize": {
+          "order": "asc"
+        },
+        "newlines-between": "always"
+      }
+    ]
+  },
+  "ignorePatterns": ["dist"]
+}

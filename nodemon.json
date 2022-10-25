@@ -1,0 +1,11 @@
+{
+  "watch": ["scripts"],
+  "ignore": [
+    ".git/*",
+    "logs/*",
+    "dist/*",
+    "node_modules/*"
+  ],
+  "ext": "json ts",
+  "exec": "ts-node scripts/app.ts"
+}

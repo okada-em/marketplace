@@ -1,0 +1,9 @@
+node_modules/
+.idea/
+dist/
+core-dist/
+artifacts/
+*.map
+.DS_Store
+cache/
+typechain-types/factories/
